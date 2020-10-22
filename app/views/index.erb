@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      Magazine Articles
+    </title>
+  </head>
+  <body>
+    <h1> Articles </h1>
+    <% @articles.each do  |a|%>
+      <p>
+      <%= a.title %>
+      <%= a.content %>
+      </p>
+    <% end %>
+  </body>
+</html>
