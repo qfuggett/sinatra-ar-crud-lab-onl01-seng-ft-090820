@@ -45,19 +45,14 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/articles/:id' do
-    new_params = {}
-    old_post = Article.find(params["id"])
-    new_params[:title] = params["title"]
-    new_params[:content] = params["content"]
-    old_post.update(new_params)
-
-    redirect "/articles/#{params["id"]}"
+   
   end
   
   delete '/articles/:id/delete' do
     @article = Article.find(params["id"])
     @article.destroy
-    erb :delete
+    
+    redirect "/articles"
   end
   
 end
