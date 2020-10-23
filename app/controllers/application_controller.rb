@@ -49,7 +49,6 @@ class ApplicationController < Sinatra::Base
     @article.update(title: params["title"], content: params["content"])
     
     redirect "/articles/#{@article.id}"
-   binding.pry
   end
   
   #delete
